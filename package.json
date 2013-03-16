@@ -1,7 +1,7 @@
 {
   "name": "bsss",
   "version": "0.0.0",
-  "description": "ERROR: No README.md file found!",
+  "description": "README.md",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,5 +11,9 @@
     "url": "git@github.com:bekzod/bsss.git"
   },
   "author": "bekzod",
-  "license": "BSD"
+  "license": "BSD",
+  "dependencies": {
+    "request": "~2.16.2",
+    "xml2json": "~0.3.1"
+  }
 }
