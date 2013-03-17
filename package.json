@@ -13,7 +13,9 @@
   "author": "bekzod",
   "license": "BSD",
   "dependencies": {
-    "request": "~2.16.2",
-    "xml2json": "~0.3.1"
+    "request": "2.16.x",
+    "xml2json": "~0.3.1",
+    "async": "~0.2.6",
+    "bytes": "~0.2.0"
   }
 }
