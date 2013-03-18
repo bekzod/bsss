@@ -3,7 +3,7 @@ node_js:
   - 0.8
   - 0.9
 script: 
-  - "node lib/S3.js"
-  - "node lib/Bsss.js"
+  - "node lib/s3.js"
+  - "node lib/bsss.js"
 notifications:
   email: bekzod@me.com
