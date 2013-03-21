@@ -3,6 +3,7 @@ node_js:
   - 0.8
   - 0.9
 script: 
+  - "node lib/index.js"
   - "node lib/s3.js"
   - "node lib/bsss.js"
 notifications:
