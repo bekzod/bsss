@@ -14,8 +14,8 @@
   "license": "BSD",
   "dependencies": {
     "request": "2.16.x",
-    "xml2json": "~0.3.1",
-    "async": "~0.2.6",
-    "bytes": "~0.2.0"
+    "xml2json": "0.3.x",
+    "bytes": "0.2.0",
+    "queue": "0.0.2"
   }
 }
