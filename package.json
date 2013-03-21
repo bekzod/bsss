@@ -1,6 +1,6 @@
 {
   "name": "bsss",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "README.md",
   "main": "lib/index.js",
   "scripts": {
