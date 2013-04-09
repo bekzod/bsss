@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Bsss by bekzod</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Bsss</h1>
+        <h2>Inspired by JSss simple S3 uploading API</h2>
+        <a href="https://github.com/bekzod/bsss" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h2>BSSS</h2>
+
+<p>Multipart S3 file uploader, simultaneously uploads several parts. Buffers upload chunks until they are fully uploaded. The module might not be scalable but good for reliable upload to S3. </p>
+
+<h2>Usage</h2>
+
+<div class="highlight"><pre>
+    <span class="kd">var</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'fs'</span><span class="p">),</span>
+    <span class="nx">stream</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">createReadStream</span><span class="p">(</span><span class="nx">__dirname</span><span class="o">+</span><span class="s1">'/../data.mov'</span><span class="p">),</span>
+    <span class="nx">Bsss</span>   <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'bsss'</span><span class="p">);</span>
+
+    <span class="kd">var</span> <span class="nx">bsss</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Bsss</span><span class="p">({</span>
+            <span class="nx">key</span>      <span class="o">:</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">AWS_KEY</span><span class="p">,</span>
+            <span class="nx">secret</span>   <span class="o">:</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">AWS_SECRET</span><span class="p">,</span>
+            <span class="nx">bucket</span>   <span class="o">:</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">AWS_BUCKET</span><span class="p">,</span>
+            <span class="nx">endPoint</span> <span class="o">:</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">AWS_ENDPOINT</span><span class="p">,</span>
+    <span class="p">})</span>
+
+    <span class="kd">var</span> <span class="nx">upload</span> <span class="o">=</span> <span class="nx">bsss</span><span class="p">.</span><span class="nx">upload</span><span class="p">(</span><span class="s1">'/path'</span><span class="p">,</span><span class="nx">stream</span><span class="p">,{</span>
+            <span class="nx">integrityCheck</span>    <span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nx">retry</span>             <span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="nx">concurrency</span>       <span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="nx">bufferSize</span>        <span class="o">:</span> <span class="s1">'15mb'</span>
+        <span class="p">});</span>
+
+    <span class="nx">bsss</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">"finished"</span><span class="p">,</span><span class="kd">function</span><span class="p">(){</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'finished'</span><span class="p">)</span>
+    <span class="p">});</span>
+
+    <span class="c1">//bsss.destroy() // destroyes all uploades</span>
+
+</pre></div>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/bekzod/bsss/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/bekzod/bsss/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/bekzod/bsss"></a> is maintained by <a href="https://github.com/bekzod">bekzod</a>.</p>
+
+          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
