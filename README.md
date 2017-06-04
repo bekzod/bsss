@@ -1,5 +1,7 @@
 BSSS
 ----
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/bekzod/bsss.svg)](https://greenkeeper.io/)
 Multipart S3 file uploader, simultaneously uploads several parts. Buffers upload chunks until they are fully uploaded. The module might not be scalable but good for reliable upload to S3. 
 
 
